@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="1.js"></script>
+  </head>
+  <body>
+    <form name="classic">
+    <select name="lophoc" size="5" onChange="updateClass(this.selectedIndex)" style="width: 150px">
+    <option selected>Select className</option>
+    <option value="">.net</option>
+    <option value="">angular</option>
+    <option value="">java</option>
+    <option value="">test</option>
+
+    </select>
+
+    <select name="classes" size="4" style="width: 150px" onClick="alert(this.options[this.options.selectedIndex].value)">
+    </select>
+    </form>
+
+    <script type="text/javascript">
+
+    var lophoclist=document.classic.lophoc
+    var classeslist=document.classic.classes
+
+    var classes=new Array()
+    classes[0]=""
+    classes[1]=["tran van a", "tran van b", "tran van c","tran van d"]
+    classes[2]=["nguyen thi a", "nguyen thi b", "nguyen thi c","nguyen thi d"]
+    classes[3]=["ho duc quy", "ho duc nam", "ho duc bac","ho duc tay"]
+    classes[4]=["ha minh tu", "ha thu ha", "le thi hoa","luu thi thuy"]
+
+    function updateClass(selectclass){
+        classeslist.options.length=0
+        if (selectclass>0){
+            for (i=0; i<classes[selectclass].length; i++)
+                classeslist.options[classeslist.options.length]=new Option(classes[selectclass][i].split("|")[0],
+                classes[selectclass][i].split("|")[1])
+        }
+    }
+</script>
+      </body>
+</html>

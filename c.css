@@ -1,0 +1,47 @@
+/** Flex layout **/
+.container {
+ display: flex;
+ flex-direction: row;
+
+}
+.header{
+  height: 100px;
+  background-color: #eee;
+}
+.item1 ,.item3{
+  flex-basis: 200px;
+  height: 120px;
+   flex-shrink: 0;
+}
+.item2{
+  flex-grow: 1;
+  text-align: center;
+}
+.item3{
+  background-color: #eee;
+}
+img{
+width: 180px;
+padding: 10px;
+}
+@media only screen and ( max-width: 620px){
+  img{
+  width: 100%;
+  padding: 10px;
+}
+.container {
+ display: flex;
+ flex-direction: column;
+}
+}
+
+div.container div.item1 ul{
+padding-left: 0px;
+}
+div.container div.item1 ul li{
+  background-color: #eee !important;
+  margin-top: 8px;
+  list-style-type: none;
+  text-decoration: underline;
+  text-align: center;
+}
